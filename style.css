@@ -1,0 +1,232 @@
+:root {
+  --primary-color: #2563eb; /* blue */
+  --primary-hover: #1d4ed8;
+  --accent-color: #fbbf24; /* gold */
+  --secondary-color: #10b981; /* green */
+  --background-color: #f3f4f6; /* light gray */
+  --container-bg: #fff;
+  --text-color: #222;
+  --border-radius: 14px;
+  --box-shadow: 0 4px 16px rgba(37,99,235,0.08);
+  --font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: url('https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1200&q=80') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.container, .form-container, #outputSection {
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  background: #e6e6fa;
+  color: #374151;
+  padding: 1.5rem 0;
+  box-shadow: 0 4px 16px rgba(91,95,151,0.08);
+  margin-bottom: 2rem;
+  border-radius: 0 0 24px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-icon, .book-icon {
+  font-size: 2.5rem;
+  color: #7c83fd;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(91,95,151,0.07);
+}
+
+.form-container {
+  background: #f3f4f6;
+  padding: 2rem;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(163,177,255,0.08);
+  margin-bottom: 2rem;
+  border: 2px solid #7c83fd;
+  backdrop-filter: blur(2px);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+label i {
+  margin-right: 0.5rem;
+  color: #7c83fd;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #b7b7a4;
+  border-radius: 14px;
+  font-size: 1rem;
+  background: #f8fafc;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  color: #374151;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #7c83fd;
+  box-shadow: 0 0 0 2px #b39ddb;
+}
+
+select {
+  background: #f3f4f6;
+  color: #374151;
+  font-weight: 600;
+}
+
+textarea {
+  height: 220px;
+  resize: vertical;
+  background: #f3f4f6;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+button {
+  background-color: #7c83fd;
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(163,177,255,0.10);
+}
+
+button:hover {
+  background-color: #374151;
+  color: #e6e6fa;
+  transform: scale(1.04);
+}
+
+.button-group {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+#outputSection {
+  margin-top: 2rem;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(91,95,151,0.10);
+  border: 1.5px solid #e5e7eb;
+  position: relative;
+  overflow: hidden;
+  min-height: 200px;
+}
+
+#outputText {
+  background: #fff;
+  border: none;
+  border-radius: 14px;
+  padding: 1.5rem;
+  font-size: 1.1rem;
+  color: #374151;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  box-shadow: 0 2px 8px rgba(91,95,151,0.07);
+  margin-bottom: 1rem;
+  min-height: 120px;
+  transition: background 0.3s;
+}
+
+#outputSection .output-header h2 {
+  background: #7c83fd;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 10px 10px 0 0;
+  font-size: 1.3rem;
+  margin: -2rem -2rem 1.5rem -2rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cute-list, .output-section ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.cute-list li {
+  margin-bottom: 0.5rem;
+  background: #e0e7ff;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  border-left: 4px solid var(--primary-color);
+  font-weight: 500;
+}
+
+.output-section {
+  margin-bottom: 1.2rem;
+  padding: 0.7rem 1rem;
+  background: #f3f4f6;
+  border-left: 4px solid var(--secondary-color);
+  border-radius: 8px;
+  font-size: 1.05rem;
+}
+
+.section-emoji {
+  color: var(--accent-color);
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  .form-container {
+    padding: 1.2rem;
+  }
+  button {
+    width: 100%;
+  }
+}

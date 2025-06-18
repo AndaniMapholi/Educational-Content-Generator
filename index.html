@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grade 7 Educational Content Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="header">
+    <div class="logo-container">
+      <span class="book-icon"><i class="fas fa-book"></i></span>
+      <i class="fas fa-graduation-cap logo-icon"></i>
+      <h1>Grade 7 Content Generator</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="form-container">
+      <form id="generatorForm">
+        <div class="form-group">
+          <label for="contentType">
+            <i class="fas fa-file-alt"></i> Content Type:
+          </label>
+          <select id="contentType" required>
+            <option value="">--Select--</option>
+            <option>Lesson Plan</option>
+            <option>Study Guide</option>
+            <option>Summary</option>
+            <option>Concept Explanation</option>
+            <option>Quiz</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">
+            <i class="fas fa-book"></i> Subject:
+          </label>
+          <select id="subject" required>
+            <option value="">--Select Subject--</option>
+            <option value="Mathematics">Mathematics</option>
+            <option value="Natural Sciences">Natural Sciences</option>
+            <option value="English">English (Home Language)</option>
+            <option value="Tshivenda">Tshivenda</option>
+            <option value="Social Sciences">Social Sciences</option>
+            <option value="Life Orientation">Life Orientation</option>
+            <option value="Technology">Technology</option>
+            <option value="EMS">Economic and Management Sciences (EMS)</option>
+            <option value="Creative Arts">Creative Arts</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="topic">
+            <i class="fas fa-lightbulb"></i> Topic:
+          </label>
+          <select id="topic" required>
+            <option value="">--Select Topic--</option>
+          </select>
+        </div>
+
+        <button type="submit">
+          <i class="fas fa-magic"></i> Generate Content
+        </button>
+      </form>
+    </div>
+
+    <div id="outputSection" class="hidden">
+      <div class="output-header">
+        <h2><i class="fas fa-file-alt"></i> Generated Content <span aria-label="sparkles" role="img">✨</span></h2>
+      </div>
+      <div id="outputText" class="output-card"></div>
+      <div class="button-group">
+        <button onclick="exportText()">
+          <i class="fas fa-download"></i> Download Output
+        </button>
+      </div>
+      <p id="stats"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
